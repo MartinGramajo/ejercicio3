@@ -8,17 +8,19 @@ const Titulo = ({ nuevoTitulo }) => {
   };
 
   return (
-    <>
+    <article>
       <h1> {nuevoTitulo}</h1>
       <h2> Hello My Friend {inicial} </h2>
-      <Button
-        variant="primary"
-        // onClick={() => setInicial("from changed state")}
-        onClick={cambiarEstado}
-      >
-        Cambiar estado
-      </Button>
-    </>
+      <div className="my-4">
+        <Button className="me-4 " variant="primary" onClick={cambiarEstado}>
+          Cambiar estado
+        </Button>
+
+        <Button variant="danger" onClick={() => setInicial("")}>
+          Quitar estado
+        </Button>
+      </div>
+    </article>
   );
 };
 
