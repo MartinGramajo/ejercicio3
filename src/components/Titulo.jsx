@@ -2,18 +2,15 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 
 const Titulo = ({ nuevoTitulo }) => {
-  // state
-  const [inicial, setInicial] = useState("Hello My Friend!");
-
-  // function
+  const [inicial, setInicial] = useState("");
   const cambiarEstado = () => {
-    setInicial("from changed state");
+    setInicial("(from changed state)!");
   };
 
   return (
     <>
       <h1> {nuevoTitulo}</h1>
-      <h2> {inicial} </h2>
+      <h2> Hello My Friend {inicial} </h2>
       <Button
         variant="primary"
         // onClick={() => setInicial("from changed state")}
